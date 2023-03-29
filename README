@@ -1,0 +1,19 @@
+# -*- mode: org; -*-
+#+TITLE: Erasmo
+
+An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcdw/rde][RDE]], yet retaining my =.emacs.d=. This repository records my journey as I delve deeper into a full GNU environment.
+
+* Goals
+- Stage 1 :: ~guix home~ services set up
+  + [ ] shells configured
+  + [ ] ~gpg~ configured
+  + [ ] ~ssh~ configured
+  + [ ] managing all packages
+  + [ ] managing packages for ~emacs~
+  + [ ] cloning and deploying ~emacs~ configuration
+  + [ ] ~guix~ channel locking
+- Stage 2 :: concise home configurations
+  + [ ] ~ssh~ managed by ~gpg~
+  + [ ] ~emacs~ configuration migrate to ~scheme~
+  + [ ] defining missing ~guix~ packages
+- Stage 3 :: ~guix system~ set up
