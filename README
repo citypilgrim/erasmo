@@ -1,0 +1,6 @@
+This branch is required for signing guix channel.
+
+An example of adding developer's key to the channel:
+
+gpg --list-public-keys --keyid-format long | grep S
+gpg --armor --export <keyid> > <userid>-<keyid>.key
