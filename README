@@ -17,3 +17,6 @@ An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcd
   + [ ] ~emacs~ configuration migrate to ~scheme~
   + [ ] defining missing ~guix~ packages
 - Stage 3 :: ~guix system~ set up
+
+* Usage (via =examples=)
+1. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make target/profiles/guix~
