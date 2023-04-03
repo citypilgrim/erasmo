@@ -13,12 +13,12 @@ PULL_EXTRA_OPTIONS=
 # to configure by based on profile, set ERASMO_TARGET to a profile
 # defined by the "dispatcher" in CONFIGS
 
-home/build: guix
-	${GUIX} home \
+default/home/build: guix
+	RDE_TARGET=default-home ${GUIX} home \
 	build ${CONFIGS}
 
-home/reconfigure: guix
-	${GUIX} home \
+default/home/reconfigure: guix
+	RDE_TARGET=default-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
 clean-target:
