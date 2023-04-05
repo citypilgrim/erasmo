@@ -1,4 +1,6 @@
 (define-module (citypilgrim feature-lists)
+  #:use-module (erasmo features emacs)
+
   #:use-module (rde features base)
 
   #:use-module (rde features shells)
@@ -7,7 +9,7 @@
   #:use-module (rde features ssh)
 
   #:use-module (rde features fontutils)
-  #:use-module (gnu packages fonts)  
+  #:use-module (gnu packages fonts)
   )
 
 (define-public %base-features
@@ -40,6 +42,12 @@
     )))
 
 ;; TODO implement emacs features
+(define-public %emacs-features
+  (list
+   (feature-emacs)
+   (feature-emacs-config
+    #:git-repo "git@github.com:citypilgrim/.emacs.erasmo.git"
+    #:elisp-packages '())))
 
 (define-public %all-features
   (append

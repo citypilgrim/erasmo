@@ -1,3 +1,11 @@
+# Store items doesn't have useful mtime, so we rely on guix.lock to prevent
+# unecessary rebuilds
+guix: target/profiles/guix-time-marker
+
+target/profiles/guix-time-marker: erasmo/channels-lock.scm
+	make target/profiles/guix
+	touch $@
+
 target/profiles:
 	mkdir -p target/profiles
 
