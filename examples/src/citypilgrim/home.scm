@@ -53,7 +53,12 @@
                                     (user "git")
                                     (port 22)
                                     (identity-file
-                                     "~/.env/ssh/github_citypilgrim"))))))
+                                     "~/.env/ssh/github_citypilgrim"))
+                      (openssh-host (name "gitlab.com")
+                                    (user "git")
+                                    (port 22)
+                                    (identity-file
+                                     "~/.env/ssh/gitlab_citypilgrim"))))))
 
      ;; channels
      (simple-service 'base-home-channels-service-type

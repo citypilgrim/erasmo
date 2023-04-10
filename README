@@ -18,7 +18,7 @@ An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcd
 - Stage 3 :: ~guix system~ set up
 
 * Usage (via =examples=)
-1. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make target/profiles/guix~
+1. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make -B target/profiles/guix~
 2. Run the following
    #+begin_src sh
      cd examples
