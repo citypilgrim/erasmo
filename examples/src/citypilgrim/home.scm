@@ -19,10 +19,7 @@
    (essential-services
     (list
      ;; essential-services
-     (simple-service 'base-home-environment-variables-service-type
-                     home-environment-variables-service-type
-                     `(("GUIX_LOCPATH" . "~/.guix-home/profile/lib/locale")))
-
+     (service home-environment-variables-service-type)
      (service home-profile-service-type base-home-packages)
      (service home-service-type)
      (service home-run-on-first-login-service-type)

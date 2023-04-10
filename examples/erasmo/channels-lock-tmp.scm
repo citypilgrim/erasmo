@@ -1,2 +1,0 @@
-(use-modules (guix channels))
-
