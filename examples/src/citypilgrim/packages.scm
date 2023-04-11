@@ -39,9 +39,11 @@
          "texlive"
 
          ;; fonts
-         "font-fira-code"
+         "font-fira-code"               ;emacs
          "font-jetbrains-mono"
          "font-iosevka-aile"
+         "font-gnu-unifont"             ;telegram
+         "font-gnu-freefont"
 
          ;; emacs dependencies
          "emacs-use-package"            ;package
@@ -104,5 +106,8 @@
          "emacs-emacsql-sqlite3"
          ;; "emacs-org-roam-ui"
          "emacs-restclient"             ;web
-         "emacs-cdlatex"
+         "emacs-cdlatex"                ;latex
+
+         "emacs-telega"                 ;msg
+         "gperf" "cmake" "pkg-config"
          )))
