@@ -35,11 +35,11 @@
 
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
-   (define (dispatcher)
-     (let ((rde-target (getenv "RDE_TARGET")))
-       (match rde-target
-         ("default-home" base-home-environment)
-         (_ base-home-environment)
-         )))
+(define (dispatcher)
+  (let ((rde-target (getenv "RDE_TARGET")))
+    (match rde-target
+      ("default-home" base-home-environment)
+      (_ base-home-environment)
+      )))
 
 (dispatcher)

@@ -25,3 +25,9 @@ An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcd
      make default/home/reconfigure
    #+end_src
 3. If you would like to configure ~emacs~, manually clone/symlink your emacs configurations
+
+* External Setup
+Unfortunately, certain things are not packaged in guix. For which we have to install manually.
+
+- ~diatheke~ ;SWORD module integration
+- ~gradle~ ;building tool

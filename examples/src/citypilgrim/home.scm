@@ -26,7 +26,8 @@
 
      (simple-service 'base-home-files-service-type
                      home-files-service-type
-                     `((".gnupg/gpg-agent.conf" ,(local-file "../../../files/gnupg/gpg-agent.conf"))))
+                     `((".gnupg/gpg-agent.conf" ,(local-file "../../../files/gnupg/gpg-agent.conf"))
+                       (".authinfo" ,(local-file "$HOME/.env/emacs/.authinfo" )))))
      (service home-xdg-configuration-files-service-type)
      (service home-activation-service-type)
      (service home-symlink-manager-service-type)

@@ -17,6 +17,7 @@
          "daemonize"
          "grep"
          "sed"
+         "unzip"
          "findutils"
          "ripgrep"
          "gcc" "clang-toolchain"
@@ -37,6 +38,7 @@
          "ispell"
          "imagemagick"
          "texlive"
+         ;; "diatheke"
 
          ;; fonts
          "font-fira-code"               ;emacs
