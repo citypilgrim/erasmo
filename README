@@ -18,16 +18,18 @@ An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcd
 - Stage 3 :: ~guix system~ set up
 
 * Usage (via =examples=)
-1. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make -B target/profiles/guix~
-2. Run the following
+1. Place environment variables in =~/.env=
+2. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make -B target/profiles/guix~
+3. Run the following
    #+begin_src sh
      cd examples
      make default/home/reconfigure
    #+end_src
-3. If you would like to configure ~emacs~, manually clone/symlink your emacs configurations
+4. If you would like to configure ~emacs~, manually clone/symlink your emacs configurations
 
 * External Setup
 Unfortunately, certain things are not packaged in guix. For which we have to install manually.
 
 - ~diatheke~ ;SWORD module integration
 - ~gradle~ ;building tool
+- ~jdk~; whatever is required by the project

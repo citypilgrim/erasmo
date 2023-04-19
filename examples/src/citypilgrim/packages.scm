@@ -32,7 +32,6 @@
          "git"
          "emacs"
          "python" "python-lsp-server"
-         "openjdk@11.0.17"
          "ffmpeg"
          "pulseaudio"
          "ispell"

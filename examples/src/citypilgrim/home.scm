@@ -1,6 +1,8 @@
 (define-module (citypilgrim home)
   #:use-module (citypilgrim packages)
 
+  #:use-module (ice-9 string-fun)
+
   #:use-module (guix gexp)
 
   #:use-module (gnu services)
@@ -27,7 +29,7 @@
      (simple-service 'base-home-files-service-type
                      home-files-service-type
                      `((".gnupg/gpg-agent.conf" ,(local-file "../../../files/gnupg/gpg-agent.conf"))
-                       (".authinfo" ,(local-file "$HOME/.env/emacs/.authinfo" )))))
+                       (".authinfo" ,(local-file (string-replace-substring "~/.env/emacs/authinfo" "~" (getenv "HOME"))))))
      (service home-xdg-configuration-files-service-type)
      (service home-activation-service-type)
      (service home-symlink-manager-service-type)
