@@ -13,6 +13,12 @@
          "guile-git"
          "guile-json"
 
+         ;; build tools
+         "automake" "autoconf"
+         "gcc-toolchain"
+         "clang-toolchain"
+         "llvm"
+
          ;; utilities
          "daemonize"
          "grep"
@@ -20,9 +26,6 @@
          "unzip"
          "findutils"
          "ripgrep"
-         "gcc" "clang-toolchain"
-         "gcc-toolchain"
-         "make"
          "binutils"
          "glibc-locales"
          "gnupg"
