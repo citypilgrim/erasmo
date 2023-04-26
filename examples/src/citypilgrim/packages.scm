@@ -14,7 +14,7 @@
          "guile-json"
 
          ;; build tools
-         "automake" "autoconf"
+         "make" "automake" "autoconf" "libtool"
          "gcc-toolchain"
          "clang-toolchain"
          "llvm"
@@ -36,6 +36,7 @@
          "emacs"
          "python" "python-lsp-server"
          "ffmpeg"
+         "tree"
          "pulseaudio"
          "ispell"
          "imagemagick"
@@ -73,9 +74,7 @@
          "emacs-helpful"
          "emacs-all-the-icons"          ;ui
          "emacs-all-the-icons-dired"
-         "emacs-spacegray-theme"
-         "emacs-doom-themes"
-         "emacs-ample-theme"
+         "emacs-doom-themes" "emacs-ef-themes"
          "emacs-flycheck"               ;ide
          "emacs-pyvenv"
          "emacs-dockerfile-mode"
