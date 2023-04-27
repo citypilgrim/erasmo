@@ -68,12 +68,13 @@
          "emacs-yasnippet"
          "emacs-yasnippet-snippets"
          "emacs-consult"
+         "emacs-embark"
          "emacs-undo-fu"                ;ux
          ;; "emacs-tabspaces"
          "emacs-popper"
-         "emacs-helpful"
-         "emacs-all-the-icons"          ;ui
-         "emacs-all-the-icons-dired"
+         "emacs-helpful" "emacs-elisp-demos"
+         "emacs-emojify"                ;ui
+         "emacs-all-the-icons" "emacs-all-the-icons-dired"
          "emacs-doom-themes" "emacs-ef-themes"
          "emacs-flycheck"               ;ide
          "emacs-pyvenv"
