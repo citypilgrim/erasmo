@@ -29,6 +29,7 @@
          "binutils"
          "glibc-locales"
          "gnupg"
+         "nss-certs"
 
          ;; applications
          "openssh"
