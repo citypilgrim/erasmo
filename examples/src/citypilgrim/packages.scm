@@ -120,5 +120,5 @@
          "emacs-cdlatex"                ;latex
          "emacs-telega"                 ;msg
          "gperf" "cmake" "pkg-config"
-         "emacs-gptel"                  ;ai
+         ;; "emacs-gptel"                  ;ai, not updated   
          )))
