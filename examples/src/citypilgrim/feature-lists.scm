@@ -35,19 +35,16 @@
    ;; ignoring the font weight and size as that is set in emacs config
    (feature-fonts
     ;; font-iosevka-aile comes by default
-    #:font-packages (list font-fira-mono font-jetbrains-mono)
+    #:font-packages (list font-fira-mono
+                          font-jetbrains-mono
+                          font-gnu-unifont
+                          font-gnu-freefont)
     ;; NOTE leaving these commented here for future reference
     ;; #:font-monospace (font "Iosevka" #:size 11 #:weight 'regular)
     ;; #:default-font-size 11
     )))
 
 ;; TODO implement emacs features
-(define-public %emacs-features
-  (list
-   (feature-emacs)
-   (feature-emacs-config
-    #:git-repo "git@github.com:citypilgrim/.emacs.erasmo.git"
-    #:elisp-packages '())))
 
 (define-public %all-features
   (append

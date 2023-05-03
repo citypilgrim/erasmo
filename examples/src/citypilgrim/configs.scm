@@ -1,37 +1,38 @@
 (define-module (citypilgrim configs)
-  ;; #:use-module (citypilgrim feature-lists)
+  #:use-module (citypilgrim feature-lists)
   #:use-module (citypilgrim home)
 
-  ;; #:use-module (rde features)
+  #:use-module (rde features)
+  #:use-module (rde features base)
   ;; #:use-module (rde features gnupg)
 
   #:use-module (ice-9 match))
 
-;; default
+;; bcmno
 
-;; TODO integrate rde configs
-;; (define-public default-config
-;;   (rde-config
-;;    (features
-;;     (append
-;;      %all-features
-;;      %citypilgrim-features
-;;      ))))
+(define %citypilgrim-features
+  (list
+   (feature-user-info
+    #:user-name "citypilgrim"
+    #:full-name "citypilgrim"
+    #:email "ciudadperegrino@gmail.com")
 
-;; (define-public default-he
-;;   (rde-config-home-environment default-config))
+   ;; (feature-gnupg
+   ;;  #:gpg-ssh-agent? #f
+   ;;  #:gpg-primary-key "3C3202B66FC44741"
+   ;;  #:pinentry-flavor 'pinentry-emacs)
+   ))
 
-;; (define %citypilgrim-features
-;;   (list
-;;    (feature-user-info
-;;     #:user-name "citypilgrim"
-;;     #:full-name "citypilgrim"
-;;     #:email "ciudadperegrino@gmail.com")
+(define-public bcmno-config
+  (rde-config
+   (features
+    (append
+     %all-features
+     %citypilgrim-features
+     ))))
 
-;;    (feature-gnupg
-;;     #:gpg-ssh-agent? #f
-;;     #:gpg-primary-key "3C3202B66FC44741"
-;;     #:pinentry-flavor 'pinentry-emacs)))
+(define-public bcmno-he
+  (rde-config-home-environment bcmno-config))
 
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
@@ -39,6 +40,7 @@
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
       ("default-home" base-home-environment)
+      ("bcmno-home" bcmno-he)
       (_ base-home-environment)
       )))
 
