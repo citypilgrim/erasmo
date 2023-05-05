@@ -2,26 +2,33 @@
   ;; #:use-module (erasmo features emacs)
 
   #:use-module (rde features base)
-
   #:use-module (rde features shells)
   #:use-module (rde features shellutils)
   #:use-module (rde features version-control)
   #:use-module (rde features ssh)
-
   #:use-module (rde features fontutils)
+
   #:use-module (gnu packages fonts)
   )
 
 (define-public %base-features
   (list
-   ;; (feature-base-services)              ;system config
-   (feature-base-packages)
-   ))
+   ;; system related
+   ;; (feature-base-services)
+   ;; (feature-desktop-services)         ;dbus
+   ;; (feature-pipewire)                 ;sound
+   ;; (feature-backlight #:step 10)
+   ;; (feature-networking)
 
-;; TODO implement docker
-;; (define-public %virtualization-features
-;;   (list
-;;    (feature-docker)))
+   ;; home related
+   (feature-base-packages)              ;includes rde
+   ;; (feature-transmission #:auto-start? #f) ;bittorrent, w emacs
+   ;; (feature-ungoogled-chromium #:default-browser? #t)
+   ;; (feature-ledger)                     ;accounting, w emacs
+   ;; (feature-imv)                        ;CLI image viewer
+   ;; (feature-mpv                         ;video player
+   ;;  #:extra-mpv-conf '((speed . 1.61)))
+   ))
 
 (define-public %cli-features
   (list
@@ -49,5 +56,6 @@
 (define-public %all-features
   (append
    %base-features
-   %cli-features
+   ;; %virtualization-features             ;docker, qemu
+   ;; %mail-features
    %ui-features))

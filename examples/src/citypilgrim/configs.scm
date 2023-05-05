@@ -5,9 +5,10 @@
   #:use-module (gnu services)
   #:use-module (gnu home services)
 
-  #:use-module (rde features)
   #:use-module (rde features base)
   ;; #:use-module (rde features gnupg)
+  #:use-module (rde features keyboard)
+  #:use-module (rde features)
   #:use-module (rde packages)
 
   #:use-module (gnu home-services ssh)
@@ -57,13 +58,23 @@
     #:home-services
     (list
      home-extra-packages-service
-     ssh-extra-config-service))))
+     ssh-extra-config-service))
+   (feature-keyboard                    ;does not seem to work on WSL
+    ;; To get all available options, layouts and variants run:
+    ;; cat `guix build xkeyboard-config`/share/X11/xkb/rules/evdev.lst
+    #:keyboard-layout
+    (keyboard-layout
+     "us" "qwerty,"
+     #:options
+     '("grp:shifts_toggle"              ;both shift for caps
+       "ctrl:nocaps"                    ;ctrl as caps
+       )))))
 
 ;;; Set-up specific
 
-;; bcmno
+;; xtjr
 
-(define bcmno-config
+(define xtjr-config
   (rde-config
    (features
     (append
@@ -71,8 +82,8 @@
      %citypilgrim-features
      ))))
 
-(define bcmno-he
-  (rde-config-home-environment bcmno-config))
+(define xtjr-he
+  (rde-config-home-environment xtjr-config))
 
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
@@ -80,7 +91,7 @@
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
       ("default-home" base-home-environment)
-      ("bcmno-home" bcmno-he)
+      ("xtjr-home" xtjr-he)
       (_ base-home-environment)
       )))
 

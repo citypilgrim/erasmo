@@ -21,16 +21,16 @@ default/home/reconfigure: guix
 	RDE_TARGET=default-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-bcmno/home/build: guix
-	RDE_TARGET=bcmno-home ${GUIX} home \
+xtjr/home/build: guix
+	RDE_TARGET=xtjr-home ${GUIX} home \
 	build ${CONFIGS}
 
-bcmno/home/reconfigure: guix
-	RDE_TARGET=bcmno-home ${GUIX} home \
+xtjr/home/reconfigure: guix
+	RDE_TARGET=xtjr-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-bcmno/home/container: guix
-	RDE_TARGET=bcmno-home ${GUIX} home \
+xtjr/home/container: guix
+	RDE_TARGET=xtjr-home ${GUIX} home \
 	container ${CONFIGS}
 
 clean-target:
