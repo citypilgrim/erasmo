@@ -1,12 +1,11 @@
 (define-module (citypilgrim feature-lists)
-  ;; #:use-module (erasmo features emacs)
-
   #:use-module (rde features base)
+  #:use-module (rde features emacs)
+  #:use-module (rde features fontutils)
   #:use-module (rde features shells)
   #:use-module (rde features shellutils)
-  #:use-module (rde features version-control)
   #:use-module (rde features ssh)
-  #:use-module (rde features fontutils)
+  #:use-module (rde features version-control)
 
   #:use-module (gnu packages fonts)
   )
@@ -51,11 +50,14 @@
     ;; #:default-font-size 11
     )))
 
-;; TODO implement emacs features
+(define-public %emacs-features
+  (list
+   (feature-emacs-portable)))
 
 (define-public %all-features
   (append
    %base-features
    ;; %virtualization-features             ;docker, qemu
    ;; %mail-features
-   %ui-features))
+   %ui-features
+   %emacs-features))
