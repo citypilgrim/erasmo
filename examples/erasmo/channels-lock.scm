@@ -5,7 +5,7 @@
         (url "https://github.com/citypilgrim/erasmo.git")
         (branch "master")
         (commit
-          "e1aecf93a7b3e83744c03d0e3a19ef4cefc448a5")
+          "9c43bd4fbb3bb54b8b89baaf2d5330786fa08095")
         (introduction
           (make-channel-introduction
             "fb2fb012abd118840ea7680df33b65314e0fa286"
@@ -16,7 +16,7 @@
         (url "https://git.sr.ht/~abcdw/rde")
         (branch "master")
         (commit
-          "474cc01a68db93016b039a6fc856ad6fdc6772e5")
+          "7738b7e49d048a58f1de0645945fc498d73a2970")
         (introduction
           (make-channel-introduction
             "257cebd587b66e4d865b3537a9a88cccd7107c95"
@@ -27,7 +27,7 @@
         (url "https://git.savannah.gnu.org/git/guix.git")
         (branch "master")
         (commit
-          "b82a18c8a33482249c634de1e91be18ac10a3c76")
+          "ae6643326a983d141fd8320a755181d21e5a1f2f")
         (introduction
           (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"

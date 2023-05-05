@@ -31,7 +31,7 @@ bcmno/home/reconfigure: guix
 
 bcmno/home/container: guix
 	RDE_TARGET=bcmno-home ${GUIX} home \
-	reconfigure ${CONFIGS}
+	container ${CONFIGS}
 
 clean-target:
 	rm -rf ./target

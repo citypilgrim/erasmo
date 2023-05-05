@@ -1,5 +1,5 @@
 (define-module (citypilgrim feature-lists)
-  #:use-module (erasmo features emacs)
+  ;; #:use-module (erasmo features emacs)
 
   #:use-module (rde features base)
 
@@ -14,7 +14,7 @@
 
 (define-public %base-features
   (list
-   (feature-base-services)
+   ;; (feature-base-services)              ;system config
    (feature-base-packages)
    ))
 

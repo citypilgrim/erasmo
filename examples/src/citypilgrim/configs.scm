@@ -2,28 +2,68 @@
   #:use-module (citypilgrim feature-lists)
   #:use-module (citypilgrim home)
 
+  #:use-module (gnu services)
+  #:use-module (gnu home services)
+
   #:use-module (rde features)
   #:use-module (rde features base)
   ;; #:use-module (rde features gnupg)
+  #:use-module (rde packages)
+
+  #:use-module (gnu home-services ssh)
 
   #:use-module (ice-9 match))
 
-;; bcmno
+;;; Service extensions
+
+(define home-extra-packages-service
+  (simple-service
+   'home-profile-extra-packages
+   home-profile-service-type
+   (append
+    (strings->packages
+     "ffmpeg"
+     "curl"))))
+
+(define ssh-extra-config-service
+  (simple-service
+   'ssh-extra-config
+   home-ssh-service-type
+   (home-ssh-extension
+    (extra-config
+     (list (ssh-host
+            (host "github.com")
+            (options
+             '((identity-file . "~/.env/ssh/github_citypilgrim")
+               (port . 22)
+               (compression . #t)))))))))
+
+;;; User-specific features with personal preferences
 
 (define %citypilgrim-features
   (list
    (feature-user-info
     #:user-name "citypilgrim"
-    #:full-name "citypilgrim"
+    #:full-name "City Pilgrim"
     #:email "ciudadperegrino@gmail.com")
 
    ;; (feature-gnupg
    ;;  #:gpg-ssh-agent? #f
    ;;  #:gpg-primary-key "3C3202B66FC44741"
    ;;  #:pinentry-flavor 'pinentry-emacs)
-   ))
 
-(define-public bcmno-config
+   (feature-custom-services
+    #:feature-name-prefix 'abcdw
+    #:home-services
+    (list
+     home-extra-packages-service
+     ssh-extra-config-service))))
+
+;;; Set-up specific
+
+;; bcmno
+
+(define bcmno-config
   (rde-config
    (features
     (append
@@ -31,7 +71,7 @@
      %citypilgrim-features
      ))))
 
-(define-public bcmno-he
+(define bcmno-he
   (rde-config-home-environment bcmno-config))
 
 ;;; Dispatcher, which helps to return various values based on environment
