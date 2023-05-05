@@ -6,7 +6,7 @@
   #:use-module (gnu home services)
 
   #:use-module (rde features base)
-  ;; #:use-module (rde features gnupg)
+  #:use-module (rde features gnupg)
   #:use-module (rde features keyboard)
   #:use-module (rde features)
   #:use-module (rde packages)
@@ -23,6 +23,7 @@
    home-profile-service-type
    (append
     (strings->packages
+     "emacs"
      "ffmpeg"
      "curl"))))
 
@@ -48,10 +49,10 @@
     #:full-name "City Pilgrim"
     #:email "ciudadperegrino@gmail.com")
 
-   ;; (feature-gnupg
-   ;;  #:gpg-ssh-agent? #f
-   ;;  #:gpg-primary-key "3C3202B66FC44741"
-   ;;  #:pinentry-flavor 'pinentry-emacs)
+   (feature-gnupg
+    #:gpg-ssh-agent? #f
+    #:gpg-primary-key "3C3202B66FC44741"
+    #:pinentry-flavor 'emacs)
 
    (feature-custom-services
     #:feature-name-prefix 'abcdw
