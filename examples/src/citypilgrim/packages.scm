@@ -42,6 +42,7 @@
          "ispell"
          "imagemagick"
          "texlive"
+         "pandoc"
          ;; "diatheke"
 
          ;; fonts
