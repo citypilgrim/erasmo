@@ -69,9 +69,9 @@
 
 ;;; Set-up specific
 
-;; xtjr
+;; tur
 
-(define xtjr-config
+(define tur-config
   (rde-config
    (features
     (append
@@ -79,16 +79,16 @@
      %citypilgrim-features
      ))))
 
-(define xtjr-he
-  (rde-config-home-environment xtjr-config))
+(define tur-he
+  (rde-config-home-environment tur-config))
 
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
 (define (dispatcher)
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
-      ("xtjr-home" xtjr-he)
-      (_ xtjr-he)
+      ("tur-home" tur-he)
+      (_ tur-he)
       )))
 
 (dispatcher)

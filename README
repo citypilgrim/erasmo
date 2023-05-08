@@ -9,18 +9,18 @@ An attempt of a =~/.dotfiles=, inspired by the amazing [[https://github.com/abcd
   + [X] ~gpg~ configured
   + [X] ~ssh~ configured
   + [X] ~guix~ channel locking
-- Stage 2 :: Incorporating ~emacs~ into ~erasmo~
+- Stage 2 :: ~guix system~ set up
+  + [ ] docker
+- Stage 3 :: Incorporating ~emacs~ into ~erasmo~
   + [ ] writing packages for ~emacs~
   + [ ] cloning and deploying ~emacs~ configuration  
-- Stage 3 :: ~guix system~ set up
-  + [ ] docker
 
 * Usage (via =examples=)
 1. Generate a ~guix~ binary based on =erasmo/channels-lock.scm= by calling ~make -B target/profiles/guix~
 2. Run the following
    #+begin_src sh
      cd examples
-     make xtjr/home/reconfigure
+     make tur/home/reconfigure
    #+end_src
 3. If you would like to configure ~emacs~, manually clone/symlink your emacs configurations to =~/.emacs.d/=
 

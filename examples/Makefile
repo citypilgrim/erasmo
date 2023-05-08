@@ -21,16 +21,16 @@ default/home/reconfigure: guix
 	RDE_TARGET=default-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-xtjr/home/build: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/home/build: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	build ${CONFIGS}
 
-xtjr/home/reconfigure: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/home/reconfigure: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-xtjr/home/container: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/home/container: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	container ${CONFIGS}
 
 clean-target:
