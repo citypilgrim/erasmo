@@ -32,6 +32,7 @@
 
     ;; applications
     "stow"
+    "pandoc"
     "emacs"
     "python" "python-lsp-server"
     "ffmpeg"
