@@ -1,6 +1,6 @@
 (define-module (citypilgrim configs)
   #:use-module (citypilgrim feature-lists)
-  #:use-module (citypilgrim home)
+  #:use-module (citypilgrim packages)
 
   #:use-module (gnu services)
   #:use-module (gnu home services)
@@ -21,11 +21,7 @@
   (simple-service
    'home-profile-extra-packages
    home-profile-service-type
-   (append
-    (strings->packages
-     "emacs"
-     "ffmpeg"
-     "curl"))))
+   %all-packages))
 
 (define ssh-extra-config-service
   (simple-service
@@ -91,9 +87,8 @@
 (define (dispatcher)
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
-      ("default-home" base-home-environment)
       ("xtjr-home" xtjr-he)
-      (_ base-home-environment)
+      (_ xtjr-he)
       )))
 
 (dispatcher)
