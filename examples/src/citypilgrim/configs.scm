@@ -32,7 +32,7 @@
      (list (ssh-host
             (host "github.com")
             (options
-             '((identity-file . "~/.env/ssh/github_citypilgrim")
+             '((identity-file . "~/.ssh/github_citypilgrim")
                (port . 22)
                (compression . #t)))))))))
 
