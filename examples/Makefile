@@ -10,27 +10,31 @@ CONFIGS=${SRC_DIR}/citypilgrim/configs.scm
 PULL_EXTRA_OPTIONS=
 # --allow-downgrades
 
-# to configure by based on profile, set ERASMO_TARGET to a profile
+# to configure by based on profile, set RDE_TARGET to a profile
 # defined by the "dispatcher" in CONFIGS
 
-default/home/build: guix
-	RDE_TARGET=default-home ${GUIX} home \
+tur/system/build: guix
+	RDE_TARGET=tur-system ${GUIX} system \
 	build ${CONFIGS}
 
-default/home/reconfigure: guix
-	RDE_TARGET=default-home ${GUIX} home \
+tur/system/reconfigure: guix
+	RDE_TARGET=tur-system ${GUIX} system \
 	reconfigure ${CONFIGS}
 
-xtjr/home/build: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/system/container: guix
+	RDE_TARGET=tur-system ${GUIX} system \
+	container ${CONFIGS}
+
+tur/home/build: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	build ${CONFIGS}
 
-xtjr/home/reconfigure: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/home/reconfigure: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-xtjr/home/container: guix
-	RDE_TARGET=xtjr-home ${GUIX} home \
+tur/home/container: guix
+	RDE_TARGET=tur-home ${GUIX} home \
 	container ${CONFIGS}
 
 clean-target:
