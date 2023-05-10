@@ -90,6 +90,7 @@
     ;; "emacs-magit-popup"            ;incompatible
     "emacs-git-gutter" "emacs-git-gutter-fringe" "emacs-fringe-helper"
     "emacs-guix"
+    "emacs-docker"
     "emacs-citar"      ;books
     ;; "emacs-citar-embark"           ;missing
     ;; "emacs-nov-el"                 ;incompatible
