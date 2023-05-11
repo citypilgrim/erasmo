@@ -6,6 +6,7 @@
   #:use-module (rde features shellutils)
   #:use-module (rde features ssh)
   #:use-module (rde features version-control)
+  #:use-module (rde features web-browsers)
 
   #:use-module (gnu packages fonts)
   )
@@ -22,7 +23,7 @@
    ;; home related
    (feature-base-packages)              ;includes rde
    ;; (feature-transmission #:auto-start? #f) ;bittorrent, w emacs
-   ;; (feature-ungoogled-chromium #:default-browser? #t)
+   (feature-ungoogled-chromium #:default-browser? #t)
    ;; (feature-ledger)                     ;accounting, w emacs
    ;; (feature-imv)                        ;CLI image viewer
    ;; (feature-mpv                         ;video player
