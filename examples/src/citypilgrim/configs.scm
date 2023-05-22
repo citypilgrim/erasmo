@@ -108,8 +108,8 @@
   (rde-config
    (features
     (append
-     %server-features     
-     %server-packages
+     %all-features
+     %server-features
      ))))
 
 (define fruta-he
