@@ -27,7 +27,6 @@
     "findutils"
     "ripgrep"
     "binutils"
-    "glibc-locales"
     "gnupg"
     "nss-certs"
 
@@ -117,4 +116,31 @@
     ;; "emacs-cdlatex"                     ;latex
     "emacs-telega"
     ;; ;; "emacs-gptel"                  ;ai, not updated
+    )))
+
+(define-public %server-packages
+  (append
+   (strings->packages
+    ;; build tools
+    "make" "automake" "autoconf" "libtool"
+    "gperf" "cmake" "pkg-config"
+    "gcc-toolchain"
+    "clang-toolchain"
+    "llvm"
+
+    ;; utilities
+    "daemonize"
+    "curl"
+    "grep"
+    "sed"
+    "unzip"
+    "findutils"
+    "binutils"
+    "gnupg"
+    "nss-certs"
+
+    ;; applications
+    "stow"
+    "emacs"
+    "python" 
     )))

@@ -23,6 +23,12 @@
    home-profile-service-type
    %all-packages))
 
+(define server-home-extra-packages-service
+  (simple-service
+   'home-profile-extra-packages
+   home-profile-service-type
+   %server-packages))
+
 (define ssh-extra-config-service
   (simple-service
    'ssh-extra-config
@@ -67,6 +73,20 @@
        "ctrl:nocaps"                    ;ctrl as caps
        )))))
 
+(define %server-features
+  (list
+   (feature-user-info
+    #:user-name "citypilgrim"
+    #:full-name "City Pilgrim"
+    #:email "ciudadperegrino@gmail.com")
+
+   (feature-custom-services
+    #:feature-name-prefix 'abcdw
+    #:home-services
+    (list
+     server-home-extra-packages-service))
+   ))
+
 ;;; Set-up specific
 
 ;; tur
@@ -82,12 +102,26 @@
 (define tur-he
   (rde-config-home-environment tur-config))
 
+;; fruta
+
+(define fruta-config
+  (rde-config
+   (features
+    (append
+     %server-features     
+     %server-packages
+     ))))
+
+(define fruta-he
+  (rde-config-home-environment fruta-config))
+
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
 (define (dispatcher)
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
       ("tur-home" tur-he)
+      ("fruta-home" fruta-he)
       (_ tur-he)
       )))
 
