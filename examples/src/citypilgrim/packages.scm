@@ -42,6 +42,8 @@
     "ispell"
     "imagemagick"
     "texlive"
+    "git"
+    "subversion"
     ;; "diatheke"
 
     ;; emacs dependencies
