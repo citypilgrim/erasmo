@@ -2,7 +2,7 @@
 # To rebuild channels-lock.scm use `make -B erasmo/channels-lock.scm`
 include profiles.mk
 
-GUIX_PROFILE=target/profiles/guix
+GUIX_PROFILE=/root/.config/guix/current
 GUIX=./pre-inst-env ${GUIX_PROFILE}/bin/guix
 
 SRC_DIR=./src
@@ -13,23 +13,23 @@ PULL_EXTRA_OPTIONS=
 # to configure by based on profile, set ERASMO_TARGET to a profile
 # defined by the "dispatcher" in CONFIGS
 
-default/home/build: guix
+default/home/build:
 	RDE_TARGET=default-home ${GUIX} home \
 	build ${CONFIGS}
 
-default/home/reconfigure: guix
+default/home/reconfigure:
 	RDE_TARGET=default-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-tur/home/build: guix
+tur/home/build:
 	RDE_TARGET=tur-home ${GUIX} home \
 	build ${CONFIGS}
 
-tur/home/reconfigure: guix
+tur/home/reconfigure:
 	RDE_TARGET=tur-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-tur/home/container: guix
+tur/home/container:
 	RDE_TARGET=tur-home ${GUIX} home \
 	container ${CONFIGS}
 
