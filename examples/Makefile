@@ -13,14 +13,6 @@ PULL_EXTRA_OPTIONS=
 # to configure by based on profile, set ERASMO_TARGET to a profile
 # defined by the "dispatcher" in CONFIGS
 
-default/home/build: guix
-	RDE_TARGET=default-home ${GUIX} home \
-	build ${CONFIGS}
-
-default/home/reconfigure: guix
-	RDE_TARGET=default-home ${GUIX} home \
-	reconfigure ${CONFIGS}
-
 tur/home/build: guix
 	RDE_TARGET=tur-home ${GUIX} home \
 	build ${CONFIGS}
@@ -29,9 +21,13 @@ tur/home/reconfigure: guix
 	RDE_TARGET=tur-home ${GUIX} home \
 	reconfigure ${CONFIGS}
 
-tur/home/container: guix
-	RDE_TARGET=tur-home ${GUIX} home \
-	container ${CONFIGS}
+tra/home/build: guix
+	RDE_TARGET=tra-home ${GUIX} home \
+	build ${CONFIGS}
+
+tra/home/reconfigure: guix
+	RDE_TARGET=tra-home ${GUIX} home \
+	reconfigure ${CONFIGS}
 
 clean-target:
 	rm -rf ./target

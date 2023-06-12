@@ -23,6 +23,12 @@
    home-profile-service-type
    %all-packages))
 
+(define simple-home-extra-packages-service
+  (simple-service
+   'home-profile-extra-packages
+   home-profile-service-type
+   %simple-packages))
+
 (define ssh-extra-config-service
   (simple-service
    'ssh-extra-config
@@ -67,6 +73,24 @@
        "ctrl:nocaps"                    ;ctrl as caps
        )))))
 
+(define %tra-features
+  (list
+   (feature-user-info
+    #:user-name "ltl"
+    #:full-name "ltl"
+    #:email "ltl@work.com")
+
+   (feature-gnupg
+    #:gpg-ssh-agent? #f
+    #:gpg-primary-key "CEB09A8EC09D727B"
+    #:pinentry-flavor 'emacs)
+
+   (feature-custom-services
+    #:feature-name-prefix 'abcdw
+    #:home-services
+    (list
+     simple-home-extra-packages-service))))
+
 ;;; Set-up specific
 
 ;; tur
@@ -82,12 +106,26 @@
 (define tur-he
   (rde-config-home-environment tur-config))
 
+;; tra
+
+(define tra-config
+  (rde-config
+   (features
+    (append
+     %all-features
+     %tra-features
+     ))))
+
+(define tra-he
+  (rde-config-home-environment tra-config))
+
 ;;; Dispatcher, which helps to return various values based on environment
 ;;; variable value.
 (define (dispatcher)
   (let ((rde-target (getenv "RDE_TARGET")))
     (match rde-target
       ("tur-home" tur-he)
+      ("tra-home" tra-he)
       (_ tur-he)
       )))
 

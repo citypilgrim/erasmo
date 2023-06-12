@@ -120,3 +120,23 @@
     "emacs-telega"
     ;; ;; "emacs-gptel"                  ;ai, not updated
     )))
+
+(define-public %simple-packages
+  (append
+   (strings->packages
+    ;; utilities
+    "gnupg"
+    "nss-certs"
+
+    ;; applications
+    "emacs"
+
+    ;; emacs dependencies
+    "emacs-eldev" "emacs-emacsql-sqlite3"
+
+    ;; emacs packages
+    "emacs-use-package"                 ;package
+    "emacs-all-the-icons" "emacs-all-the-icons-dired"
+    "emacs-all-the-icons-completion"  "emacs-all-the-icons-ibuffer"
+    "emacs-doom-modeline"
+    )))
