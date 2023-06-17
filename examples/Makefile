@@ -27,10 +27,22 @@ tur/home/build: guix
 
 tur/home/reconfigure: guix
 	RDE_TARGET=tur-home ${GUIX} home \
-	reconfigure ${CONFIGS}
+	reconfigure ${CONFIGS} ${PULL_EXTRA_OPTIONS}
 
 tur/home/container: guix
 	RDE_TARGET=tur-home ${GUIX} home \
+	container ${CONFIGS}
+
+fruta/home/build: guix
+	RDE_TARGET=fruta-home ${GUIX} home \
+	build ${CONFIGS}
+
+fruta/home/reconfigure: guix
+	RDE_TARGET=fruta-home ${GUIX} home \
+	reconfigure ${CONFIGS} ${PULL_EXTRA_OPTIONS}
+
+fruta/home/container: guix
+	RDE_TARGET=fruta-home ${GUIX} home \
 	container ${CONFIGS}
 
 clean-target:
