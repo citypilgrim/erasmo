@@ -42,7 +42,7 @@
    ;; ignoring the font weight and size as that is set in emacs config
    (feature-fonts
     ;; font-iosevka-aile comes by default
-    #:font-packages (list font-fira-code
+    #:extra-font-packages (list font-fira-code
                           font-jetbrains-mono
                           font-gnu-unifont
                           font-gnu-freefont)
