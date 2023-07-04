@@ -32,6 +32,7 @@
     "nss-certs"
 
     ;; applications
+    "gdb"
     "stow"
     "pandoc"
     "emacs"
@@ -43,7 +44,7 @@
     "imagemagick"
     "texlive"
     "git"
-    "subversion"
+    "subversion" "git:svn"
     ;; "diatheke"
 
     ;; emacs dependencies
