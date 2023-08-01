@@ -32,10 +32,11 @@
     "nss-certs"
 
     ;; applications
+    "gdb"
     "stow"
     "pandoc"
     "emacs"
-    "python" "python-lsp-server"
+    "python" "python2" "python-lsp-server"
     "ffmpeg"
     "tree"
     "pulseaudio"
@@ -43,7 +44,7 @@
     "imagemagick"
     "texlive"
     "git"
-    "subversion"
+    "subversion" "git:svn"
     ;; "diatheke"
 
     ;; emacs dependencies
