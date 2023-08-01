@@ -36,7 +36,7 @@
     "stow"
     "pandoc"
     "emacs"
-    "python" "python-lsp-server"
+    "python" "python2" "python-lsp-server"
     "ffmpeg"
     "tree"
     "pulseaudio"
