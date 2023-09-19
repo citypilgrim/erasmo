@@ -36,7 +36,7 @@
     "perf"
     "stow"
     "pandoc"
-    "emacs"
+    "emacs-next-pgtk"
     "python" "python2" "python-lsp-server"
     "ffmpeg"
     "tree"
@@ -54,7 +54,6 @@
     ;; emacs packages
     ;; "emacs-transient"                   ;shared
     ;; ;; "emacs-dired-hacks"              ;incompatible
-    "emacs-use-package"                 ;package
     ;; "emacs-gcmh"                        ;performance
     ;; "emacs-no-littering"                ;defaults
     ;; "emacs-pinentry" "pinentry-emacs"
@@ -131,13 +130,12 @@
     "nss-certs"
 
     ;; applications
-    "emacs"
+    "emacs-next-pgtk"
 
     ;; emacs dependencies
     "emacs-eldev" "emacs-emacsql-sqlite3"
 
     ;; emacs packages
-    "emacs-use-package"                 ;package
     "emacs-all-the-icons" "emacs-all-the-icons-dired"
     "emacs-all-the-icons-completion"  "emacs-all-the-icons-ibuffer"
     "emacs-doom-modeline"
