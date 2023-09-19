@@ -33,6 +33,7 @@
 
     ;; applications
     "gdb"
+    "perf"
     "stow"
     "pandoc"
     "emacs"
