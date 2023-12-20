@@ -30,13 +30,14 @@
     "glibc-locales"
     "gnupg"
     "nss-certs"
+    "gnuplot"
 
     ;; applications
     "gdb"
     "perf"
     "stow"
     "pandoc"
-    "emacs-next-pgtk"
+    "emacs"
     "python" "python2" "python-lsp-server"
     "ffmpeg"
     "tree"
@@ -49,7 +50,8 @@
     ;; "diatheke"
 
     ;; emacs dependencies
-    "emacs-eldev" "emacs-emacsql-sqlite3"
+    "emacs-eldev"
+    ;; "emacs-emacsql-sqlite3"             ;deprecated
 
     ;; emacs packages
     ;; "emacs-transient"                   ;shared
@@ -130,10 +132,11 @@
     "nss-certs"
 
     ;; applications
-    "emacs-next-pgtk"
+    "emacs"
 
     ;; emacs dependencies
-    "emacs-eldev" "emacs-emacsql-sqlite3"
+    "emacs-eldev"
+    ;; "emacs-emacsql-sqlite3"             ;deprecated
 
     ;; emacs packages
     "emacs-all-the-icons" "emacs-all-the-icons-dired"
