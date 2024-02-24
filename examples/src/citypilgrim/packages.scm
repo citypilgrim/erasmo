@@ -133,6 +133,7 @@
 
     ;; applications
     "emacs"
+    "stow"
 
     ;; emacs dependencies
     "emacs-eldev"
