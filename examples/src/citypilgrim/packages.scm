@@ -31,6 +31,7 @@
     "gnupg"
     "nss-certs"
     "gnuplot"
+    "samba"
 
     ;; applications
     "gdb"
@@ -130,6 +131,7 @@
     ;; utilities
     "gnupg"
     "nss-certs"
+    "samba"
 
     ;; applications
     "emacs"
