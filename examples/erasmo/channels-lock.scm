@@ -5,11 +5,7 @@
         (url "https://github.com/citypilgrim/erasmo.git")
         (branch "master")
         (commit
-<<<<<<< Updated upstream
-          "2c2f66193fdff78431e0c9f4740ac4e4dde39761")
-=======
-          "d9cdbc607e74f0fdc0e1ce3373d64e75a06d12d4")
->>>>>>> Stashed changes
+         "d9cdbc607e74f0fdc0e1ce3373d64e75a06d12d4")
         (introduction
           (make-channel-introduction
             "fb2fb012abd118840ea7680df33b65314e0fa286"
@@ -20,11 +16,7 @@
         (url "https://git.sr.ht/~abcdw/rde")
         (branch "master")
         (commit
-<<<<<<< Updated upstream
-          "778c7da031ab4139ed0862b475b2e98ff7b3b9d3")
-=======
-          "043b3982865e5936acf12f95e0952277141d58d9")
->>>>>>> Stashed changes
+         "043b3982865e5936acf12f95e0952277141d58d9")
         (introduction
           (make-channel-introduction
             "257cebd587b66e4d865b3537a9a88cccd7107c95"
@@ -35,11 +27,7 @@
         (url "https://git.savannah.gnu.org/git/guix.git")
         (branch "master")
         (commit
-<<<<<<< Updated upstream
-          "dc2b59ddc1e8f510935777db40e881896f7a0cab")
-=======
-          "be5bec47f7942a5e4d2a30eadd9a6fa4c715e88b")
->>>>>>> Stashed changes
+         "be5bec47f7942a5e4d2a30eadd9a6fa4c715e88b")
         (introduction
           (make-channel-introduction
             "9edb3f66fd807b096b48283debdcddccfea34bad"
