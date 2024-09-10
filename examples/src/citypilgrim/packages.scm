@@ -34,6 +34,7 @@
     "samba"
 
     ;; applications
+    "r" "r-plotrix"
     "gdb"
     "perf"
     "stow"
