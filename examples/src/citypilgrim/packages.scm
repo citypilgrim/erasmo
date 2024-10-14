@@ -30,17 +30,18 @@
     "glibc-locales"
     "gnupg"
     "nss-certs"
-    "gnuplot"
     "samba"
+    "tdlib"                             ;for emacs telega
 
     ;; applications
-    "r" "r-plotrix"
+    "gnuplot"
     "gdb"
     "perf"
     "stow"
     "pandoc"
     "emacs"
     "python" "python2" "python-lsp-server"
+    "r" "r-plotrix"
     "ffmpeg"
     "tree"
     "pulseaudio"
@@ -80,9 +81,10 @@
     ;; "emacs-popper"
     ;; "emacs-helpful" "emacs-elisp-demos"
     ;; "emacs-emojify"                     ;ui
-    "emacs-all-the-icons" "emacs-all-the-icons-dired"
-    "emacs-all-the-icons-completion"  "emacs-all-the-icons-ibuffer"
-    "emacs-doom-modeline"
+    ;; "emacs-all-the-icons" "emacs-all-the-icons-dired"
+    ;; "emacs-all-the-icons-completion"  "emacs-all-the-icons-ibuffer"
+    ;; "emacs-nerd-icons"
+    ;; "emacs-doom-modeline"
     ;; "emacs-doom-themes" "emacs-ef-themes"
     ;; "emacs-flycheck"   ;ide
     ;; ;; "emacs-groovy-modes"           ;incompatible
@@ -122,7 +124,7 @@
     ;; ;; "emacs-org-roam-ui"            ;missing
     ;; "emacs-restclient"                  ;web
     ;; "emacs-cdlatex"                     ;latex
-    "emacs-telega"
+    ;; "emacs-telega"
     ;; ;; "emacs-gptel"                  ;ai, not updated
     )))
 
